@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}i-Girls{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<p>&nbsp;</p>
+<div class="middle">
+    <div id="middle">VS</div>
+    <div id="middle-circle"></div>
+</div>
+<div id="container" >
+    <div class="box">
+        <form class="r1">
+            <button class="fas fa-flag" id="rep"></button>
+        </form>
+        <form class="m1">
+            <button class="fas fa-search-plus" id="mag1"></button>
+        </form>
+        <div class="tag">@<a href="https://www.instagram.com/{{player1.username}}" target="_blank">{{player1.username}}</a></div>
+        <div class="playerButton">
+            <form class="b1">
+                <input class="btn1" type="submit" name="1" value="{{player1.username}}" />
+            </form>
+            <img class="imgContainer" src="{{ url_for('static', filename='players/_' ~ player1.username ~ '_.png') }}" width="640" id="1" />
+        </div>
+    </div>
+    <div class="box">
+        <form class="r2">
+            <button class="fas fa-flag" id="rep"></button>
+        </form>
+        <form class="m2">
+            <button class="fas fa-search-plus" id="mag2"></button>
+        </form>
+        <div class="tag">@<a href="https://www.instagram.com/{{player2.username}}" target="_blank">{{player2.username}}</a></div>
+        <div class="playerButton">
+            <form class="b2">
+                <input class="btn2" type="submit" name="2" value="{{player2.username}}" />
+            </form>
+            <img class="imgContainer" src="{{ url_for('static', filename='players/_' ~ player2.username ~ '_.png') }}" width="640" id="2" />
+        </div>
+    </div>
+</div>
+<div class="bg-modal">
+    <div class="modal-contents">
+        <img class="modal-img" src="{{ url_for('static', filename='players/_' ~ player1.username ~ '_.png') }}" />
+    </div>
+</div>
+{% endblock %}

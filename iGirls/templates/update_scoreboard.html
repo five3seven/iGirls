@@ -1,0 +1,10 @@
+<tbody class="replace">
+    {% for row in rows %}
+    <tr>
+        <td scope="row">
+            <a id="s" href="https://www.instagram.com/{{row.username}}" target="_blank">{{row.username}}</a>
+        </td>
+        <td>{{row.score}}</td>
+    </tr>
+    {% endfor %}
+</tbody>

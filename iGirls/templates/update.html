@@ -1,0 +1,27 @@
+<div id="container" >
+    <div class="box">
+        <form class="r1">
+            <button class="fas fa-flag" id="rep"></button>
+        </form>
+        <div class="tag">@<a href="https://www.instagram.com/{{player1.username}}" target="_blank">{{player1.username}}</a></div>
+        <div class="playerButton">
+            <form class="b1">
+                <input class="btn1" type="submit" name="1" value="{{player1.username}}" />
+            </form>
+            <img class="imgContainer" src="{{ url_for('static', filename='players/_' ~ player1.username ~ '_.png') }}" width="640" id="1" />
+        </div>
+    </div>
+    <div class="box">
+        <form class="r2">
+            <button class="fas fa-flag" id="rep"></button>
+        </form>
+        <div class="tag">@<a href="https://www.instagram.com/{{player2.username}}" target="_blank">{{player2.username}}</a></div>
+        <div class="playerButton">
+            <form class="b2">
+                <input class="btn2" type="submit" name="2" value="{{player2.username}}" />
+            </form>
+            <img class="imgContainer" src="{{ url_for('static', filename='players/_' ~ player2.username ~ '_.png') }}" width="640" id="2" />
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</div>

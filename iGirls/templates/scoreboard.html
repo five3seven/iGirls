@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}i-Girls{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<style>
+body{
+    overflow: auto;
+}
+</style>
+    <div>
+    <table class="player-table">
+    <thead class="thead-light">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Score</th>
+            </tr>
+        </thead>
+        <tbody class="replace">
+            {% for row in rows %}
+            <tr>
+                <td scope="row">
+                    <a id="s" href="https://www.instagram.com/{{row.username}}" target="_blank">{{row.username}}</a>
+                </td>
+                <td>{{row.score}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+{% endblock %}

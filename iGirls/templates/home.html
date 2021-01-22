@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}I-Girls{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<body background="{{ url_for('static', filename='images/canva-photo-editor.png') }}" style="padding: 2px;">
+    <div class="about-title">
+        What is i-Girls?
+    </div>
+    <div class="about-sub">
+        A fun game where you have to choose between to girls and determine which prettier.
+    </div>
+    <div class="cont-guide">
+        <div class="about-guide">
+            Voting is done by clicking the persons picture.
+            Instagram account can also be viewed by clicking the name in the bottom right corner of an image.
+        </div>
+    </div>
+    <div class="cont-nav">
+        <div class="nav">
+            <button onclick="document.location='/play'">Play</button>
+            <button onclick="document.location='/scoreboard'">Scoreboard</button>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
